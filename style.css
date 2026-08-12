@@ -1,0 +1,419 @@
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
+
+:root {
+    --cor-fundo: #f4f6f8;
+    --cor-fundo-conteudo: #ffffff;
+    --cor-texto: #222222;
+    --cor-titulo: #123b63;
+    --cor-destaque: #0066cc;
+    --cor-borda: #cccccc;
+    --cor-botao: #005a9c;
+    --cor-botao-hover: #003f6f;
+
+    --tamanho-base: 18px;
+    --espacamento: 1.7;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: var(--tamanho-base);
+    line-height: var(--espacamento);
+}
+
+
+/* =========================================
+   ACESSIBILIDADE
+========================================= */
+
+.skip-link {
+    position: absolute;
+
+    top: -100px;
+    left: 10px;
+
+    background: #000;
+    color: #fff;
+
+    padding: 12px 18px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    z-index: 9999;
+}
+
+
+.skip-link:focus {
+    top: 10px;
+}
+
+
+/* Foco bastante visível para teclado */
+
+button:focus,
+a:focus {
+    outline: 4px solid #ffbf00;
+    outline-offset: 3px;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+
+.cabecalho {
+    background: linear-gradient(
+        135deg,
+        #0d3b66,
+        #0066a1
+    );
+
+    color: white;
+
+    padding: 40px 0;
+}
+
+
+.cabecalho h1 {
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    font-size: 2.2rem;
+    line-height: 1.25;
+}
+
+
+.subtitulo {
+    font-size: 1.15rem;
+}
+
+
+/* =========================================
+   BOTÕES DE ACESSIBILIDADE
+========================================= */
+
+.acessibilidade {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 30px;
+}
+
+
+.acessibilidade button {
+    border: 2px solid white;
+
+    background-color: white;
+    color: #123b63;
+
+    padding: 11px 15px;
+
+    border-radius: 6px;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    min-height: 48px;
+}
+
+
+.acessibilidade button:hover {
+    background-color: #e8f1f8;
+}
+
+
+/* =========================================
+   CONTEÚDO
+========================================= */
+
+main {
+    padding: 40px 0;
+}
+
+
+.texto {
+    background-color: var(--cor-fundo-conteudo);
+
+    padding: 40px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+section {
+    margin-bottom: 40px;
+}
+
+
+section:last-child {
+    margin-bottom: 0;
+}
+
+
+h2 {
+    color: var(--cor-titulo);
+
+    font-size: 1.7rem;
+
+    line-height: 1.3;
+
+    margin-top: 0;
+}
+
+
+p {
+    margin-bottom: 20px;
+}
+
+
+strong {
+    color: #003f70;
+}
+
+
+/* =========================================
+   LISTA DE DICAS
+========================================= */
+
+.dicas {
+    background-color: #eaf4ff;
+
+    border-left: 6px solid var(--cor-destaque);
+
+    padding: 25px;
+
+    border-radius: 6px;
+}
+
+
+.dicas h3 {
+    margin-top: 0;
+
+    color: var(--cor-titulo);
+}
+
+
+.dicas ul {
+    padding-left: 30px;
+}
+
+
+.dicas li {
+    margin-bottom: 12px;
+}
+
+
+/* =========================================
+   CONCLUSÃO
+========================================= */
+
+.conclusao {
+    background-color: #f0f7f0;
+
+    border-left: 6px solid #2e7d32;
+
+    padding: 25px;
+
+    border-radius: 6px;
+}
+
+
+/* =========================================
+   RODAPÉ
+========================================= */
+
+.rodape {
+    background-color: #123b63;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px 0;
+}
+
+
+.rodape p {
+    margin: 0;
+}
+
+
+/* =========================================
+   ALTO CONTRASTE
+========================================= */
+
+body.alto-contraste {
+    background: #000;
+    color: #fff;
+}
+
+
+body.alto-contraste .cabecalho {
+    background: #000;
+    color: #fff;
+
+    border-bottom: 3px solid #fff;
+}
+
+
+body.alto-contraste .texto {
+    background: #000;
+
+    color: #fff;
+
+    border: 2px solid #fff;
+
+    box-shadow: none;
+}
+
+
+body.alto-contraste h2,
+body.alto-contraste h3,
+body.alto-contraste strong {
+    color: #ffff00;
+}
+
+
+body.alto-contraste .dicas,
+body.alto-contraste .conclusao {
+    background: #000;
+
+    color: #fff;
+
+    border: 2px solid #ffff00;
+}
+
+
+body.alto-contraste .rodape {
+    background: #000;
+
+    border-top: 3px solid #fff;
+}
+
+
+body.alto-contraste .acessibilidade button {
+    background: #000;
+    color: #fff;
+
+    border: 2px solid #fff;
+}
+
+
+/* =========================================
+   CONTRASTE INVERTIDO
+========================================= */
+
+body.contraste-invertido {
+    background: #fff;
+    color: #000;
+
+    filter: invert(100%);
+}
+
+
+/*
+   Evita que imagens e alguns elementos
+   fiquem visualmente prejudicados.
+*/
+
+body.contraste-invertido img {
+    filter: invert(100%);
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .cabecalho {
+        padding: 30px 0;
+    }
+
+
+    .cabecalho h1 {
+        font-size: 1.8rem;
+    }
+
+
+    .texto {
+        padding: 25px 20px;
+    }
+
+
+    h2 {
+        font-size: 1.45rem;
+    }
+
+
+    .acessibilidade {
+        flex-direction: column;
+    }
+
+
+    .acessibilidade button {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================
+   REDUÇÃO DE MOVIMENTO
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
+
+}
